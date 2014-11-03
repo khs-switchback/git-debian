@@ -18,3 +18,4 @@ WORKDIR /var/workspace
 # Github deploy ke
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 RUN echo "IdentityFile /var/settings/id_rsa" >> /root/.ssh/config
+RUN echo "LogLevel ERROR" >> /root/.ssh/config
