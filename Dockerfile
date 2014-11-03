@@ -4,14 +4,14 @@ RUN apt-get update && \
     apt-get install -y git && \
     rm -rf /var/lib/apt/lists/*
 
+# Setting up SSH key
+RUN mkdir -p /root/.ssh && mkdir -p /var/workspace && mkdir -p /var/settings
+
 VOLUME /var/workspace
 VOLUME /var/settings
 
 ENV REPO null
 ENV BRANCH master
-
-# Setting up SSH key
-RUN mkdir -p /root/.ssh
 
 WORKDIR /var/workspace
 
