@@ -8,6 +8,7 @@ RUN apt-get update && \
 
 # Setting up SSH key
 RUN mkdir -p /root/.ssh && mkdir -p /var/workspace && mkdir -p /var/settings
+RUN chmod 0700 /root/.ssh
 
 VOLUME /var/workspace
 VOLUME /var/settings
