@@ -15,7 +15,7 @@ ENV BRANCH master
 
 WORKDIR /var/workspace
 
-# Github deploy ke
-RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
-RUN echo "IdentityFile /var/settings/id_rsa" >> /root/.ssh/config
-RUN echo "LogLevel ERROR" >> /root/.ssh/config
+# add script to run
+ADD *.sh /usr/local/bin/
+
+CMD /bin/bash /usr/local/bin/run.sh
