@@ -1,14 +1,11 @@
 FROM switchback/debian
 
-USER root
-
 RUN apt-get update && \
     apt-get install -y git && \
     rm -rf /var/lib/apt/lists/*
 
 # Setting up SSH key
-RUN mkdir -p /root/.ssh && mkdir -p /var/workspace && mkdir -p /var/settings
-RUN chmod 0700 /root/.ssh
+RUN mkdir -p $HOME/.ssh && mkdir -p /var/workspace && mkdir -p /var/settings
 
 VOLUME /var/workspace
 VOLUME /var/settings
