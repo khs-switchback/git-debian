@@ -18,4 +18,4 @@ WORKDIR /var/workspace
 # add script to run
 ADD *.sh /usr/local/bin/
 
-CMD /bin/bash /usr/local/bin/run.sh
+CMD /bin/bash /usr/local/bin/setup.sh
